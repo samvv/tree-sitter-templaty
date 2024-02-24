@@ -38,7 +38,7 @@ module.exports = grammar(Py, {
     ),
 
     _statement: ($, original) => choice(
-      prec(MAX_PREC + 1, original),
+      original,
       $._templaty_statement,
     ),
 
@@ -48,6 +48,7 @@ module.exports = grammar(Py, {
       $.templaty_for_in_statement,
       $.templaty_expression_statement,
       $.templaty_join_statement,
+      $.templaty_code_statement,
       //$.templaty_text_statement,
     ),
 
@@ -55,46 +56,33 @@ module.exports = grammar(Py, {
 
     templaty_expression_statement: $ => seq('{{', $.expression, '}}'),
 
+    templaty_code_statement: $ => seq('{!', repeat($._statement), '!}'),
+
     templaty_join_statement: $ => seq(
       '{%',
-      $._ws,
       'join',
-      $._ws,
       $.pattern,
-      $._ws,
       'in',
-      $._ws,
       $.expression,
-      $._ws,
       'with',
       $.expression,
-      $._ws,
       '%}',
       repeat($._statement),
       '{%',
-      $._ws,
       'endjoin',
-      $._ws,
       '%}'
     ),
 
     templaty_for_in_statement: $ => seq(
       '{%',
-      $._ws,
       'for',
-      $._ws,
       $.pattern,
-      $._ws,
       'in',
-      $._ws,
       $.expression,
-      $._ws,
       '%}',
       repeat($._statement),
       '{%',
-      $._ws,
       'endfor',
-      $._ws,
       '%}'
     ),
 
