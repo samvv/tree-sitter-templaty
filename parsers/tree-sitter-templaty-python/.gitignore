@@ -4,3 +4,6 @@ node_modules/
 
 # used by node-gyp
 /build/
+
+# resulting parser
+*.so

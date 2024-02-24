@@ -1,5 +1,9 @@
 node_modules/
+
 Makefile
+
+# resulting parser
+*.so
 
 # compiled by tree-sitter
 *.wasm
