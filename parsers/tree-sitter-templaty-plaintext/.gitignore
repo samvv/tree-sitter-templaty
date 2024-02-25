@@ -1,5 +1,11 @@
+
+# populated by tools like npm
 node_modules/
 
+# populated by node-gyp
+build/
+
+# local development files
 Makefile
 
 # resulting parser
