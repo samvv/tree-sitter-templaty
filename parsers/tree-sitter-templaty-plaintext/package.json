@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "nan": "^2.18.0",
-    "tree-sitter-python": "file:python"
+    "tree-sitter-python": "^0.20.4"
   },
   "tree-sitter": [
     {
