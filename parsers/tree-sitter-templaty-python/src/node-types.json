@@ -1090,6 +1090,10 @@
           "named": true
         },
         {
+          "type": "templaty_comment",
+          "named": true
+        },
+        {
           "type": "templaty_expression_statement",
           "named": true
         },
@@ -2801,6 +2805,10 @@
         },
         {
           "type": "templaty_code_statement",
+          "named": true
+        },
+        {
+          "type": "templaty_comment",
           "named": true
         },
         {
@@ -6334,6 +6342,10 @@
           "named": true
         },
         {
+          "type": "templaty_comment",
+          "named": true
+        },
+        {
           "type": "templaty_expression_statement",
           "named": true
         },
@@ -6366,6 +6378,10 @@
         },
         {
           "type": "templaty_code_statement",
+          "named": true
+        },
+        {
+          "type": "templaty_comment",
           "named": true
         },
         {
@@ -7223,6 +7239,10 @@
   },
   {
     "type": "string_start",
+    "named": true
+  },
+  {
+    "type": "templaty_comment",
     "named": true
   },
   {

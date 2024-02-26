@@ -136,6 +136,7 @@ module.exports = grammar(Py, {
       $.templaty_expression_statement,
       $.templaty_join_statement,
       $.templaty_code_statement,
+      $.templaty_comment,
     ),
 
     templaty_expression_statement: $ => seq('{{', $.py_expression, '}}'),
@@ -169,6 +170,12 @@ module.exports = grammar(Py, {
       'endfor',
       '%}'
     ),
+
+    templaty_comment: _ => token(seq(
+      '{#',
+      /[^#]*#+([^}#][^#]*#+)*/,
+      '}',
+    )),
 
     /// Integration with parent gramamar
 
