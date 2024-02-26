@@ -101,12 +101,19 @@ module.exports = grammar({
       $.templaty_expression_statement,
       $.templaty_code_statement,
       $.templaty_join_statement,
+      $.templaty_comment,
       $.templaty_text_statement,
     ),
 
     templaty_code_statement: $ => seq('{!', repeat($._statement), '!}'),
 
     templaty_expression_statement: $ => seq('{{', $.expression, '}}'),
+
+    templaty_comment: _ => seq(
+      '{#',
+      /[^#]*#+([^}#][^#]*#+)*/,
+      '}',
+    ),
 
     templaty_join_statement: $ => seq(
       '{%',

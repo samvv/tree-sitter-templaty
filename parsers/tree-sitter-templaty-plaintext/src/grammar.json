@@ -30,6 +30,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "templaty_comment"
+        },
+        {
+          "type": "SYMBOL",
           "name": "templaty_text_statement"
         }
       ]
@@ -68,6 +72,23 @@
         {
           "type": "STRING",
           "value": "}}"
+        }
+      ]
+    },
+    "templaty_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "{#"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^#]*#+([^}#][^#]*#+)*"
+        },
+        {
+          "type": "STRING",
+          "value": "}"
         }
       ]
     },
