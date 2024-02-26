@@ -2901,11 +2901,6 @@
     }
   },
   {
-    "type": "templaty_comment",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "templaty_expression_statement",
     "named": true,
     "fields": {},
@@ -3847,6 +3842,10 @@
     "named": true
   },
   {
+    "type": "templaty_comment",
+    "named": true
+  },
+  {
     "type": "templaty_text_statement",
     "named": true
   },
@@ -3884,10 +3883,6 @@
   },
   {
     "type": "{!",
-    "named": false
-  },
-  {
-    "type": "{#",
     "named": false
   },
   {

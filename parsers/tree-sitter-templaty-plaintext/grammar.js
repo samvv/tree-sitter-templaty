@@ -109,11 +109,11 @@ module.exports = grammar({
 
     templaty_expression_statement: $ => seq('{{', $.expression, '}}'),
 
-    templaty_comment: _ => seq(
+    templaty_comment: _ => token(seq(
       '{#',
       /[^#]*#+([^}#][^#]*#+)*/,
       '}',
-    ),
+    )),
 
     templaty_join_statement: $ => seq(
       '{%',
